@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React, { createContext, lazy, Suspense, useState } from 'react';
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
+import Nomatch from './components/asset/Nomatch';
+const Home = lazy(()=>(import('./components/routes/Home'))) ;
 
+
+export const AppContext = createContext(null)
 function App() {
+  const [data, setData] = useState({name:'', pwd:"", email:''})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{data, setData}} >
+      {/* <Navbar /> */}
+      <Suspense fallback={'Loading...'}>
+      <Routes>
+    <Route path='/' exact element={ <Home />} />
+    <Route path='*' element={ <Nomatch />} />
+      </Routes>
+      </Suspense>
+    </AppContext.Provider>
   );
 }
 

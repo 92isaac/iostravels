@@ -1,0 +1,127 @@
+@media screen and (min-width: 581px){
+    .navbar{
+        display: flex;
+        text-align: center;
+        padding: 10px 20px;
+        /* border: solid; */
+        color: #fff;
+
+
+    }
+
+    .hamburger h3{
+        font-style: italic;
+        font-weight: 900;
+        font-size: xx-large;
+    }
+
+    .search-input input{
+        border-radius: 10px;
+        background-color: #e5e5e5;
+        padding: 2px 10px;
+    }
+
+    .collaspe2, .nav-item{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 10px 50px 10px 20px;
+        /* border: solid; */
+    }
+
+    .collaspe2{
+        margin-left: 100px;
+        width: 100%;
+    }
+    
+    .nav-item{
+        gap: 30px;
+    }
+    
+    .hamburger button{
+        display: none;
+    }
+
+    .membership-btn button{
+        /* width: 100%; */
+        /* display: grid; */
+        /* place-items: center; */
+        box-shadow: 1px 2px 3px;
+        margin: 0 auto;
+        padding: 5px 20px;
+        border-radius: 10px;
+    }
+
+    .membership-btn button:nth-child(even){
+        margin-left: 20px;
+    }
+
+    .select-countries{
+        background: #cecece;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 580px){
+    .navbar{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        padding: 10px 20px;
+        color: #fff;
+    }
+
+    .hamburger h3{
+        font-style: italic;
+        font-weight: 900;
+        font-size: xx-large;
+    }
+
+    .search-input input{
+        width: 80%;
+        border: solid;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+
+    .nav-item li{
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .membership-btn button{
+        width: 80%;
+        display: grid;
+        place-items: center;
+        box-shadow: 1px 2px 3px;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 8px 0;
+    }
+
+    .membership-btn button:nth-child(even){
+        margin-top: 20px;
+    }
+
+    .hamburger{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .select-countries{
+        margin-bottom: 15px;
+    }
+
+    .collaspe1{
+        display: none;
+        transition: 5s;
+    }
+
+    .collaspe2{
+        display: block;
+    }
+}
