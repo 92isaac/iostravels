@@ -2,6 +2,7 @@ import React, { createContext, lazy, Suspense, useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Nomatch from './components/asset/Nomatch';
+import Flight from './components/homefiles/Flight';
 const Home = lazy(()=>(import('./components/routes/Home'))) ;
 
 
@@ -13,7 +14,9 @@ function App() {
       {/* <Navbar /> */}
       <Suspense fallback={'Loading...'}>
       <Routes>
-    <Route path='/' exact element={ <Home />} />
+    <Route path='/' exact element={ <Home />} >
+      <Route path='flight' element={<Flight />} />
+    </Route>
     <Route path='*' element={ <Nomatch />} />
       </Routes>
       </Suspense>

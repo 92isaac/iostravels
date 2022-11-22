@@ -55,6 +55,9 @@
     .membership-btn button:nth-child(even){
         margin-left: 20px;
     }
+    .nav-item li a{
+        font-size: 14px;
+    }
 
     .select-countries{
         background: #cecece;
