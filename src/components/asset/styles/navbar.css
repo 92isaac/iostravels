@@ -33,12 +33,16 @@
         margin-left: 100px;
         width: 100%;
     }
+
+    .country_collaspe{
+        display: block;
+    }
     
     .nav-item{
         gap: 30px;
     }
     
-    .hamburger button{
+    .hamburger button, .displayNone{
         display: none;
     }
 
@@ -62,6 +66,14 @@
     .select-countries{
         background: #cecece;
         border-radius: 5px;
+        padding: 0 10px;
+    }
+
+    .select-countries p{
+       display: flex;
+        padding: 0;
+        margin: 0;
+        /* height: 10px; */
     }
 }
 
@@ -119,7 +131,7 @@
         margin-bottom: 15px;
     }
 
-    .collaspe1{
+    .collaspe1, .displayNone{
         display: none;
         transition: 5s;
     }
@@ -127,4 +139,6 @@
     .collaspe2{
         display: block;
     }
+
+    
 }

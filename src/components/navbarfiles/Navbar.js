@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 // import { BsSearch } from 'react-icons/bs'
 import { HiMenu } from "react-icons/hi"
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes, FaChevronDown } from 'react-icons/fa'
 import '../asset/styles/navbar.css'
+import { select } from "../asset/database";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
+  const [seltoggle, setSeltoggle] = useState(false)
+  const [selVal, setSelval] = useState(select[0])
+  const ref = useRef()
   return (
     <nav className="navbar">
       <div className="hamburger">
@@ -25,7 +29,6 @@ const Navbar = () => {
           type="text"
           placeholder="&#xF002; Search for trips..."
         />
-        {/* <i className="fas fa-search" aria-hidden='true' ></i> */}
       </div>
       <ul className="nav-item">
         <li><NavLink to="/group_trips" >Group Trips</NavLink></li>
@@ -34,11 +37,12 @@ const Navbar = () => {
         <li><NavLink to="/about" >About Us</NavLink></li>
         <li><NavLink to="/saved_trips" >Saved Trips</NavLink></li>
       </ul>
-       <select name="" id="" className="select-countries">
-        <option value="">NGR</option>
-        <option value="">USA</option>
-        <option value="">GHN</option>
-       </select>
+       <div name="" id="" className="select-countries">
+        <p onClick={()=>{setSeltoggle(!seltoggle)}}><img src={selVal.countFlag} alt="nigeria flag"/>{selVal.cunrency}<FaChevronDown /></p>
+            {select.map((itr)=>(<div onClick={()=>{setSelval(ref.current)}} ref={ref.current} className={!seltoggle ? "displayNone" : 'country_collaspe' } key={itr.countFlag}>
+              <h4><img src={itr.countFlag} alt="nigeria flag"/>{itr.cunrency}</h4>
+            </div>))}
+       </div>
        <div className="membership-btn">
         <button >Login</button>
         <button >Sign Up</button>
