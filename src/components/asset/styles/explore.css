@@ -1,0 +1,56 @@
+.explore{
+    margin-left: 5%;
+}
+
+.trip-image{
+    width: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    /* border: solid; */
+    border-radius: 13px;
+    justify-content: space-around;
+    /* margin: 40px; */
+}
+
+
+.trip-images{
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
+    /* width: calc(100% - 30px); */
+    display: flex;
+    justify-content: space-between;
+}
+
+img.img-rel{
+    position: relative;
+    height: 100%;
+    /* z-index: 1; */
+}
+
+.overlay{
+    position: absolute;
+    top: 20;
+    bottom: 0;
+    color: #fff;
+    padding: 5%;
+}
+
+.overlay h3{
+    margin-bottom: 10%;
+    font-weight: 900;
+}
+
+.trip-views{
+    position: relative;
+}
+
+.slide-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: red;
+
+}

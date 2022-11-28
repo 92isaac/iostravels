@@ -1,12 +1,18 @@
 import React from "react";
-// import Flight from "../homefiles/Flight";
+import Beach from "../homefiles/Beach";
 import Herosection from "../homefiles/Herosection";
+import PhotoGallery from "../homefiles/PhotoGallery";
+import TripsExplore from "../homefiles/TripsExplore";
+import WhyChooseUs from "../homefiles/WhyChooseUs";
 
 const Home = () => {
   return (
     <div >
      <Herosection />
-     {/* <Flight /> */}
+     <TripsExplore />
+     <Beach />
+     <WhyChooseUs />
+     <PhotoGallery />
     </div>
   );
 };

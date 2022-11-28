@@ -1,0 +1,13 @@
+.slope1{
+    border: solid;
+    height: 200px;
+    width: 100%;
+    transform: rotate(7deg);
+}
+.slope2{
+    margin-top: 150px;
+    border: solid;
+    height: 200px;
+    width: 100%;
+    transform: rotate(-7deg);
+}

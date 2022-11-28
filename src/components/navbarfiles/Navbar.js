@@ -39,7 +39,7 @@ const Navbar = () => {
       </ul>
        <div name="" id="" className="select-countries">
         <p onClick={()=>{setSeltoggle(!seltoggle)}}><img src={selVal.countFlag} alt="nigeria flag"/>{selVal.cunrency}<FaChevronDown /></p>
-            {select.map((itr)=>(<div onClick={()=>{setSelval(ref.current)}} ref={ref.current} className={!seltoggle ? "displayNone" : 'country_collaspe' } key={itr.countFlag}>
+            {select.map((itr)=>(<div onClick={()=>{setSelval(ref.current)}} ref={ref.current} className={!seltoggle ? "displayNone" : 'country_collaspe' } key={itr.cunrency}>
               <h4><img src={itr.countFlag} alt="nigeria flag"/>{itr.cunrency}</h4>
             </div>))}
        </div>
