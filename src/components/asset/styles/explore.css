@@ -23,8 +23,8 @@
 }
 
 img.img-rel{
-    position: relative;
-    height: 100%;
+    /* position: relative;
+    height: 100%; */
     /* z-index: 1; */
 }
 
@@ -41,6 +41,10 @@ img.img-rel{
     font-weight: 900;
 }
 
+.overlay p{
+    margin-left: 35px;
+}
+
 .trip-views{
     position: relative;
 }
@@ -54,3 +58,4 @@ img.img-rel{
     color: red;
 
 }
+

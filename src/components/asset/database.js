@@ -25,7 +25,7 @@ export const select = [
 ]
 
 
-export const swiperdata = [
+export const tripsData = [
     {
         slideImage:paris,
         location: "Tour to Paris",

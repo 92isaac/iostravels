@@ -1,31 +1,66 @@
-import React  from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { tripsData } from "../asset/database";
 import "../asset/styles/explore.css";
-// import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-// import "swiper/css";
-import { Virtual } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { swiperdata } from "../asset/database";
-import SwipeProps from "./SwipeProps";
+import CarOsel from "../carousel/CarOsel";
 
 
-const Explore = () => {
-  const slides = Array.from({ length: 1000 }).map(
-    (el, index) => `Slide ${index + 1}`
-  );
+const Explore = ({first, second}) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const carouselReference = useRef(null);
+  useInterval(() => {
+    setActiveIndex((activeIndex + 1) % 4);
+    if (!!carouselReference && !!carouselReference.current) {
+      const width = carouselReference.current.offsetWidth;
+      console.log(`width: ${width}`);
+      carouselReference.current.scrollTo(width * activeIndex, 0);
+    }
+  }, 1000);
 
+
+  console.log((activeIndex + 1) % 4)
   return (
-    <div className="explore">
-      <h6>Explore</h6>
-      <h4>Explore Different Private Trips</h4>
-      <Swiper modules={[Virtual]} spaceBetween={50} slidesPerView={3} virtual>
-      {swiperdata.map((itr)=>(<SwipeProps 
-      slideImage={itr.slideImage}
-      location={itr.location}
-      date={itr.date}
-      />))}
-</Swiper>
+    <div className="explore my-10">
+      <h6 className="text-red-500 text-sm font-black">Explore</h6>
+      <h4 className="font-black">{first} <span className="block">{second}</span></h4>
+
+      <div className="text-center overflow-hidden mt-4">
+      <div
+        ref={carouselReference}
+        className="flex overflow-x-hidden snap-x scroll-smooth h-full "
+      >
+        <div className="flex h-80 ">
+          {tripsData.map((itr)=>(<CarOsel 
+          key={itr.slideImage}
+          slideImage={itr.slideImage}
+          location = {itr.location}
+          date = {itr.date}
+          />))}
+        </div>
+      </div>
+    </div>
+
     </div>
   );
 };
 
+
+export const useInterval = (callback, delay) => {
+  const savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+    // console.log(`savedCallback.current: ${savedCallback.current}`)
+    // console.log(`callback: ${callback}`)
+  }, [callback]);
+
+  useEffect(() => {
+    const tick = () => {
+      savedCallback.current();
+    };
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+};
 export default Explore;

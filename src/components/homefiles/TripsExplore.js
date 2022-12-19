@@ -4,7 +4,8 @@ import Explore from './Explore'
 const TripsExplore = () => {
   return (
     <>
-        <Explore />
+        <Explore  first='Explore Different' second="Private Trips" />
+        <Explore  first='Explore Group Trips' second="with Friend" />
     </>
   )
 }

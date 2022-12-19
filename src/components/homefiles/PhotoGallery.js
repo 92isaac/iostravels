@@ -4,8 +4,8 @@ import galleryImg1 from '../asset/images/beach1.png'
 
 const PhotoGallery = () => {
   return (
-    <div>
-        <div className="slope1">
+    <div className='parent-slope mt-12'>
+        <div className="slope1 mt-40">
         <img src={galleryImg1} alt="" loading='lazy' />
         <img src={galleryImg1} alt="" loading='lazy' />
         <img src={galleryImg1} alt="" loading='lazy' />
@@ -14,8 +14,8 @@ const PhotoGallery = () => {
         <img src={galleryImg1} alt="" loading='lazy' />
         {/* <img src={galleryImg1} alt="" loading='lazy' /> */}
         </div>
-        <div className="slope">
-            <h5>Gallery</h5>
+        <div className="slope mt-10">
+            <h5 className=''>Gallery</h5>
             <h4>Photos from Our Tours</h4>
         </div>
         <div className="slope2">

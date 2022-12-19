@@ -9,14 +9,14 @@ const Beach = () => {
     <div className='beach-image'>
         <div className="flex-image">
             <div className="flex-image1">
-                <img src={beach1} alt="" />
+                <img src={beach1} alt="" loading='lazy'/>
             </div>
             <div className="flex-image1">
-                <img src={beach2} alt="" />
+                <img src={beach2} alt="" loading='lazy'/>
             </div>
         </div>
         <div className="image-wide">
-            <img src={australia} alt="" />
+            <img src={australia} alt="" loading='lazy'/>
         </div>
     </div>
   )

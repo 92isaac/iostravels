@@ -22,9 +22,9 @@ const WhyChooseUs = () => {
             <h4>Why Choose Us</h4>
         </div>
         <div className="wcu-card">
-           {chooseUs.map((itr)=>(
+           {chooseUs.map((itr, index)=>(
             <WcuCard 
-            key={itr.icon}
+            key={index}
             icon={itr.icon}
             title={itr.title}
             story={itr.story}
