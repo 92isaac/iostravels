@@ -1,6 +1,5 @@
 import React from 'react'
 import '../asset/styles/whychooseus.css'
-import { GiPalmTree } from 'react-icons/gi'
 import { chooseUs } from '../asset/database'
 
 

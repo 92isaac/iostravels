@@ -2,6 +2,7 @@ import React, { createContext, lazy, Suspense, useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Nomatch from './components/asset/Nomatch';
+import Footer from './components/footerfiles/Footer';
 import Register from './components/formfiles/Register';
 import Flight from './components/homefiles/Flight';
 const Home = lazy(()=>(import('./components/routes/Home'))) ;
@@ -22,6 +23,7 @@ function App() {
     <Route path='*' element={ <Nomatch />} />
       </Routes>
       </Suspense>
+      <Footer />
     </AppContext.Provider>
   );
 }
