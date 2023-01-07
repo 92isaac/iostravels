@@ -1,4 +1,5 @@
 import React from "react";
+import Gallery from "../carousel/Gallery";
 import Beach from "../homefiles/Beach";
 import Herosection from "../homefiles/Herosection";
 import PhotoGallery from "../homefiles/PhotoGallery";
@@ -13,6 +14,7 @@ const Home = () => {
      <Beach />
      <WhyChooseUs />
      <PhotoGallery />
+     {/* <Gallery /> */}
     </div>
   );
 };

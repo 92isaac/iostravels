@@ -51,6 +51,11 @@ export const tripsData = [
         location: "Tour to Paris",
         date:"20th Dec - Jan 3rd",
     },
+    {
+        slideImage:beach,
+        location: "Tour to Paris",
+        date:"20th Dec - Jan 3rd",
+    },
 
 ]
 
