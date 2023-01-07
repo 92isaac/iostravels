@@ -25,4 +25,6 @@
     width: 20%;
     margin: 0 auto;
     font-size: 12px;
+    /* letter-spacing: 10px; */
+    text-align: center;
 }
