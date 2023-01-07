@@ -1,0 +1,117 @@
+@media screen and (min-width: 581px){
+
+.newsletter-wrapper{
+    margin: 10% 5%;
+    background: linear-gradient(to bottom, rgb(255, 0, 0, 0.1), rgb(0, 128, 0, 0.1)), url('../images/subscribe.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 30vh;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.newsletter-text{
+    width: 40%;
+    /* border: 5px solid red; */
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.newsletter-text h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.newsletter-text p{
+    font-size: 15px;
+    line-height: 5px;
+}
+.newsletter-form{
+width: 90%;
+margin: 20px auto;
+}
+
+.newsletter-form label{
+    display: block; 
+    text-align: left;
+    margin-left: 10%;
+
+}
+
+.newsletter-form input[type="text"]{
+    width: 80%;
+}
+
+
+.newsletter-form input[type="button"]{
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    background-color: #2E61E6;
+    padding: 8px;
+    border-radius: 10px;
+
+}
+}
+
+
+@media screen and (max-width: 580px){
+
+    .newsletter-wrapper{
+        margin: 10% 5%;
+        background: linear-gradient(to bottom, rgb(255, 0, 0, 0.1), rgb(0, 128, 0, 0.1)), url('../images/subscribe.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 30vh;
+        border-radius: 20px;
+        text-align: center;
+    }
+    
+    .newsletter-text{
+        width: 70%;
+        /* border: 5px solid red; */
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+    }
+    
+    .newsletter-text h1{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .newsletter-text p{
+        font-size: 15px;
+        line-height: 5px;
+    }
+    
+    .newsletter-form{
+    width: 100%;
+    margin: 20px auto;
+    }
+    
+    .newsletter-form label{
+        display: block; 
+        text-align: left;
+        margin-left: 10%;
+    
+    }
+    
+    .newsletter-form input[type="text"]{
+        width: 80%;
+    }
+    
+    
+    .newsletter-form input[type="button"]{
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+        background-color: #2E61E6;
+        padding: 8px;
+        border-radius: 10px;
+    
+    }
+    
+
+}
