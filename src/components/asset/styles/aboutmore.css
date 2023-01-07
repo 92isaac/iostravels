@@ -1,0 +1,103 @@
+@media screen and (min-width: 581px){
+    .aboutmore{
+        /* display: flex; */
+        gap: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* flex-wrap: wrap; */
+        /* flex-direction: row-reverse; */
+        margin: 0 5%;
+        height: 70vh;
+    }
+
+    .aboutmore2-wrapper {
+        background-color: #09132E;
+        color: #fff;
+    }
+
+    .aboutmore2{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 5%;
+        height: 70vh;
+
+
+    }
+
+    .moretext{
+        width: 70%;
+        margin: 150px auto;
+    }
+    .moretext2{
+        width: 40%;
+        margin: 150px auto;
+        padding: 0 50px 0 0 ;
+    }
+
+    .aboutmore2 .moreimage2 img{
+     /* aspect-ratio: 16 / 12; */
+     object-fit: cover;
+     width: 70%;
+     margin: 12% auto;
+    }
+    .aboutmore .moreimage img{
+     /* aspect-ratio: 16 / 12; */
+     object-fit: contain;
+     width: 30%;
+    }
+    .aboutmore .moreimage{
+        display: flex;
+        /* border: 3px solid red; */
+        gap: 20px;
+    }
+
+    .moretext p:first-child{
+        color: red;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    .moretext h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+
+@media screen and (max-width: 580px){
+    .aboutmore{
+        /* display: block; */
+        /* gap: 100px; */
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 7% 5%;
+        min-height: 70vh;
+    }
+
+    .moretext{
+        width: 70%;
+        margin:10px auto 50px auto;
+    }
+
+    .aboutmore .moreimage img{
+     /* aspect-ratio: 16 / 12; */
+     object-fit: contain;
+     width: 30%;
+    }
+    .aboutmore .moreimage{
+        display: flex;
+        /* border: 3px solid red; */
+        gap: 20px;
+    }
+
+    .moretext p:first-child{
+        color: red;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    .moretext h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
