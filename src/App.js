@@ -25,6 +25,7 @@ function App() {
     <Route path='*' element={ <Nomatch />} />
       </Routes>
       </Suspense>
+      {/* {!path === '*' && <Footer /> } */}
       <Footer />
     </AppContext.Provider>
   );

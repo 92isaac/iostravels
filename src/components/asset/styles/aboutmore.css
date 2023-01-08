@@ -1,11 +1,8 @@
 @media screen and (min-width: 581px){
     .aboutmore{
-        /* display: flex; */
         gap: 100px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* flex-wrap: wrap; */
-        /* flex-direction: row-reverse; */
         margin: 0 5%;
         height: 70vh;
     }
@@ -35,19 +32,16 @@
     }
 
     .aboutmore2 .moreimage2 img{
-     /* aspect-ratio: 16 / 12; */
      object-fit: cover;
      width: 70%;
      margin: 12% auto;
     }
     .aboutmore .moreimage img{
-     /* aspect-ratio: 16 / 12; */
      object-fit: contain;
      width: 30%;
     }
     .aboutmore .moreimage{
         display: flex;
-        /* border: 3px solid red; */
         gap: 20px;
     }
 
@@ -66,8 +60,6 @@
 
 @media screen and (max-width: 580px){
     .aboutmore{
-        /* display: block; */
-        /* gap: 100px; */
         display: flex;
         flex-direction: column-reverse;
         margin: 7% 5%;
@@ -80,13 +72,11 @@
     }
 
     .aboutmore .moreimage img{
-     /* aspect-ratio: 16 / 12; */
      object-fit: contain;
      width: 30%;
     }
     .aboutmore .moreimage{
         display: flex;
-        /* border: 3px solid red; */
         gap: 20px;
     }
 
