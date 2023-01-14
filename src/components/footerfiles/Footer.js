@@ -1,10 +1,15 @@
 import React from 'react'
 import '../asset/styles/footer.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa'
 
 
 const Footer = () => {
+    const {pathname} = useLocation()
+    if(pathname === '/private_trips') return null
+
+
+
     const currYear = new Date().getFullYear()
   return (
     <div className='footer'>

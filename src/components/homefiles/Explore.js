@@ -11,13 +11,13 @@ const Explore = ({first, second}) => {
     setActiveIndex((activeIndex + 1) % 4);
     if (!!carouselReference && !!carouselReference.current) {
       const width = carouselReference.current.offsetWidth;
-      console.log(`width: ${width}`);
+      // console.log(`width: ${width}`);
       carouselReference.current.scrollTo(width * activeIndex, 0);
     }
   }, 1000);
 
 
-  console.log((activeIndex + 1) % 4)
+  // console.log((activeIndex + 1) % 4)
   return (
     <div className="explore my-10">
       <h6 className="text-red-500 text-sm font-black">Explore</h6>

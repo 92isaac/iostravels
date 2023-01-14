@@ -1,4 +1,4 @@
-import React, { createContext, lazy, Suspense, useState } from 'react';
+import React, { createContext, lazy, Suspense, useContext, useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Nomatch from './components/asset/Nomatch';
@@ -6,14 +6,21 @@ import Footer from './components/footerfiles/Footer';
 import Register from './components/formfiles/Register';
 import Flight from './components/homefiles/Flight';
 import About from './components/routes/About';
+import Navbar from './components/navbarfiles/Navbar';
+import { AppProvider } from './components/asset/Context';
 const Home = lazy(()=>(import('./components/routes/Home'))) ;
 
 
 export const AppContext = createContext(null)
 function App() {
+
+
   const [data, setData] = useState({name:'', pwd:"", email:''})
+
+  
+  const globalData ={data, setData}
   return (
-    <AppContext.Provider value={{data, setData}} >
+    <AppProvider >
       {/* <Navbar /> */}
       <Suspense fallback={'Loading...'}>
       <Routes>
@@ -25,10 +32,11 @@ function App() {
     <Route path='*' element={ <Nomatch />} />
       </Routes>
       </Suspense>
-      {/* {!path === '*' && <Footer /> } */}
       <Footer />
-    </AppContext.Provider>
+    </AppProvider>
   );
 }
 
 export default App;
+
+
