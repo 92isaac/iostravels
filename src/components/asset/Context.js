@@ -4,7 +4,7 @@ import { createContext,  useContext, useState } from 'react';
 export const AppContext = createContext(null)
 
 export const AppProvider =({children})=>{
-    const [data, setData] = useState('')
+    const [data, setData] = useState({name:'', age:''})
     const [toogle, setToogle] = useState(false)
 
     const updateData =(e)=>{
